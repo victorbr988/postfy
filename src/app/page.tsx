@@ -33,15 +33,15 @@ export default function Login() {
       <section>
         <div className="flex flex-col gap-2 pb-4 items-center">
           <h1 className="font-jetbrains text-3xl font-semibold text-violet-500">Postfy</h1>
-          <p className="font-jetbrains text-postfy-100 text-xl">Postagem em massa de conteúdo</p>
+          <p className="font-jetbrains dark:text-postfy-100 text-postfy-900 text-xl">Postagem em massa de conteúdo</p>
         </div>
         
         <Form.Root
-          className="border-[1px] border-postfy-800 rounded-lg flex flex-col gap-8 p-6 md:w-postify-lg"
+          className="border-[1px] dark:border-postfy-800 border-postfy-200 rounded-lg flex flex-col gap-8 p-6 md:w-postify-lg"
           onSubmit={handleSubmit(onAction)}
         >
           <Form.Label className="flex flex-col gap-1">
-            <span className="text-postfy-100 font-jetbrains">Email</span>
+            <span className="dark:text-postfy-100 font-jetbrains text-postfy-900">Email</span>
             <div>
               <Form.Field
                 type="email"
@@ -57,7 +57,7 @@ export default function Login() {
             
           </Form.Label>
           <Form.Label className="flex flex-col gap-1">
-            <span className="text-postfy-100 font-jetbrains">Senha</span>
+            <span className="dark:text-postfy-100 text-postfy-900 font-jetbrains">Senha</span>
             <div>
               <Form.Field
                 type="password"
@@ -75,15 +75,15 @@ export default function Login() {
           <Form.Trigger>
             <Button
               type="submit"
-              className="bg-postfy-200 font-jetbrains text-postfy-900 w-full py-5 hover:brightness-90 transition-all text-lg"
+              className="font-jetbrains dark:text-postfy-900 text-postfy-100 w-full py-6   transition-all text-lg"
               variant="outline"
             >
               Entrar
             </Button>
           </Form.Trigger>
           <div className="flex gap-1">
-            <span className="font-jetbrains text-postfy-100">Ainda não possui conta?</span>
-            <Link className="font-jetbrains text-postfy-200" href="#">Cadastre-se</Link>
+            <span className="font-jetbrains dark:text-postfy-100 text-postfy-900">Ainda não possui conta?</span>
+            <Link className="font-jetbrains text-postfy-700 dark:text-postfy-200  font-bold dark:font-normal" href="#">Cadastre-se</Link>
           </div>
         </Form.Root>
       </section>

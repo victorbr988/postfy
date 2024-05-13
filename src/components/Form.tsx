@@ -1,9 +1,9 @@
 import { FormHTMLAttributes, InputHTMLAttributes, LabelHTMLAttributes, ReactNode, Ref, forwardRef } from "react";
 import { Input } from "./ui/input";
 
-interface IFormRootParams extends FormHTMLAttributes<HTMLFormElement> {}
+interface IFormRootProps extends FormHTMLAttributes<HTMLFormElement> {}
 
-function Root(props: IFormRootParams) {
+function Root(props: IFormRootProps) {
   return (
     <form
       { ...props }
@@ -13,13 +13,13 @@ function Root(props: IFormRootParams) {
   )
 }
 
-interface IFormTriggerParams {
+interface IFormTriggerProps {
   children: ReactNode;
   className?: string;
 }
 
 //action buttons
-function Trigger({ children, className }: IFormTriggerParams) {
+function Trigger({ children, className }: IFormTriggerProps) {
   return (
     <section className={ className }>
       { children }
@@ -27,9 +27,9 @@ function Trigger({ children, className }: IFormTriggerParams) {
   )
 }
 
-interface IFormLabelParams extends LabelHTMLAttributes<HTMLLabelElement> {}
+interface IFormLabelProps extends LabelHTMLAttributes<HTMLLabelElement> {}
 
-function Label(props: IFormLabelParams){
+function Label(props: IFormLabelProps){
   return (
     <label { ...props }>
       { props.children }
@@ -37,9 +37,9 @@ function Label(props: IFormLabelParams){
   )
 }
 
-interface IFormFieldParams extends InputHTMLAttributes<HTMLInputElement> {}
+interface IFormFieldProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-function InputCustom(props: IFormFieldParams, ref: Ref<HTMLInputElement>) {
+function InputCustom(props: IFormFieldProps, ref: Ref<HTMLInputElement>) {
   return (
     <Input { ...props } ref={ref}/>
   )
