@@ -26,7 +26,8 @@ const config = {
       }
     },
     fontFamily: {
-      "jetbrains": "JetBrains Mono"
+      jetbrains: "JetBrains Mono",
+      poppins: "Poppins"
     },
     container: {
       center: true,

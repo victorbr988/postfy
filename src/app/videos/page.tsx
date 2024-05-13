@@ -1,7 +1,7 @@
-import { ThemeSwitch } from "@/components/custom/ThemeSwitch";
+import { Header } from "@/components/custom/Header";
 
 export default function Videos() {
   return (
-    <ThemeSwitch />
+    <Header />
   )
 }

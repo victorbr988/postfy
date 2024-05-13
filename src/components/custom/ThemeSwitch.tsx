@@ -17,7 +17,7 @@ export function ThemeSwitch() {
   if (!mounted) {
     return (
       <FiSun 
-        className="h-5 w-5 cursor-pointer dark:text-postfy-200 text-postfy-900"
+        className="h-6 w-6 cursor-pointer dark:text-postfy-200 text-postfy-900"
         name="ligth"
         onClick={() => handleTheme("light")} 
       /> 
@@ -32,14 +32,14 @@ export function ThemeSwitch() {
     <Fragment>
       { resolvedTheme === "dark" && (
         <FiSun 
-          className="h-5 w-5 cursor-pointer dark:text-postfy-200 text-postfy-900"
+          className="h-6 w-6 cursor-pointer dark:text-postfy-200 text-postfy-900"
           name="ligth"
           onClick={() => handleTheme("light")} 
         /> 
       )}
       { resolvedTheme === "light" && (
         <FiMoon
-          className="h-5 w-5 cursor-pointer dark:text-postfy-200 text-postfy-900"
+          className="h-6 w-6 cursor-pointer dark:text-postfy-200 text-postfy-900"
           name="dark" 
           onClick={() => handleTheme("dark")}
         />

@@ -17,7 +17,7 @@ export default function Login() {
       title: "Trabalhando nisso!",
       description: "Postfy",
       action: (
-        <ToastAction altText="Goto schedule to undo">Ok</ToastAction>
+        <ToastAction altText="Confirmar">Ok</ToastAction>
       ),
     })
     //POST USER
@@ -75,7 +75,7 @@ export default function Login() {
           <Form.Trigger>
             <Button
               type="submit"
-              className="font-jetbrains dark:text-postfy-900 text-postfy-100 w-full py-6   transition-all text-lg"
+              className="font-jetbrains"
               variant="outline"
             >
               Entrar
