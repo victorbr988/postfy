@@ -1,12 +1,15 @@
 "use client"
 
+import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { Fragment, useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 type IThemeOptions = "light" | "dark"
-
-export function ThemeSwitch() {
+interface IThemeSwitchProps {
+  iconClasses?: string;
+}
+export function ThemeSwitch({ iconClasses }: IThemeSwitchProps) {
   const [mounted, setMounted] = useState<boolean>(false)
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -17,7 +20,7 @@ export function ThemeSwitch() {
   if (!mounted) {
     return (
       <FiSun 
-        className="h-6 w-6 cursor-pointer dark:text-postfy-200 text-postfy-900"
+        className={cn("iconTheme", iconClasses)}
         name="ligth"
         onClick={() => handleTheme("light")} 
       /> 
@@ -32,14 +35,14 @@ export function ThemeSwitch() {
     <Fragment>
       { resolvedTheme === "dark" && (
         <FiSun 
-          className="h-6 w-6 cursor-pointer dark:text-postfy-200 text-postfy-900"
+          className={cn("iconTheme", iconClasses)}
           name="ligth"
           onClick={() => handleTheme("light")} 
         /> 
       )}
       { resolvedTheme === "light" && (
         <FiMoon
-          className="h-6 w-6 cursor-pointer dark:text-postfy-200 text-postfy-900"
+          className={cn("iconTheme", iconClasses)}
           name="dark" 
           onClick={() => handleTheme("dark")}
         />

@@ -75,7 +75,7 @@ export default function Login() {
           <Form.Trigger>
             <Button
               type="submit"
-              className="font-jetbrains"
+              className="font-jetbrains py-6"
               variant="outline"
             >
               Entrar

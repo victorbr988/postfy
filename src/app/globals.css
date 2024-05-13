@@ -12,3 +12,7 @@ body {
 input {
   @apply dark:text-postfy-200 dark:placeholder:text-postfy-200 dark:border-postfy-800 text-postfy-900 placeholder:text-postfy-900 border-postfy-200 font-jetbrains dark:bg-postfy-900 bg-postfy-100;
 }
+
+.iconTheme {
+  @apply cursor-pointer dark:text-postfy-200 text-postfy-900
+}
