@@ -23,6 +23,10 @@ const config = {
       },
       red: {
         300: "#EF4444"
+      },
+      green: {
+        600: "#16a34a",
+        700: "#15803d"
       }
     },
     fontFamily: {
@@ -39,7 +43,10 @@ const config = {
     extend: {
       width: {
         "postify-lg": "450px",
-        "postify-xl": "650px"
+        "postify-xl": "650px",
+      },
+      fontSize: {
+        "2md": "16px"
       },
       keyframes: {
         "accordion-down": {

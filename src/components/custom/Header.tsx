@@ -1,6 +1,6 @@
 "use client"
 
-import { Separator } from "@radix-ui/react-separator";
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { FiArrowUpCircle, FiLogOut } from "react-icons/fi";
 import { Button } from "../ui/button";
@@ -16,7 +16,7 @@ export function Header() {
         <MenuMobile />
         <h1 className="font-jetbrains text-2xl font-semibold text-violet-500">Postfy</h1>
       </section>
-      <Separator className="h-7 mt-[2px] dark:bg-postfy-800 bg-postfy-200" orientation="vertical" />
+      <Separator className="h-7 hidden sm:flex mt-[2px] dark:bg-postfy-800 bg-postfy-200" orientation="vertical" />
       <section className="flex justify-between w-full items-center font-poppins">
         <nav className="sm:flex hidden">
           <Link 
