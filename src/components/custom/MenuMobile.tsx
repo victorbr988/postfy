@@ -25,7 +25,7 @@ export function MenuMobile() {
         className="dark:bg-postfy-900 bg-postfy-100 font-poppins border border-postfy-200 dark:border-postfy-800 ml-4"
         Icon={ FiMenu }
       >
-        <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
+        <DropdownMenuLabel className="font-medium">Minha conta</DropdownMenuLabel>
         <DropdownMenuSeparator className="dark:bg-postfy-800 bg-postfy-200" />
         <DropdownMenuItem className="dark:text-postfy-200 text-postfy-800 flex gap-2 items-center">
           <FiUser className="w-4 h-4" />
