@@ -6,7 +6,6 @@ import { ToastAction } from "@/components/ui/toast";
 
 export function Dropzone() {
   const [isDraggerActive, setIsDraggerActive] = useState<boolean>(false)
-  const [files, setFiles] = useState<File[]>([])
   const { toast } = useToast()
 
   function ValidateMimeTypeFiles(fileList: FileList) {
@@ -36,7 +35,7 @@ export function Dropzone() {
     const allFilesAreValids = ValidateMimeTypeFiles(e.dataTransfer.files)
     
     if(allFilesAreValids) {
-      setFiles(e.dataTransfer.files)
+      //TODO: POST FILES TO API
     }
 
     if (!allFilesAreValids) {
@@ -66,7 +65,6 @@ export function Dropzone() {
       <FiUpload className="w-6 h-6 dark:text-postfy-200 text-postfy-800" />
       <span className="dark:text-postfy-200 text-postfy-800">Arraste os vídeos até aqui</span>
       <span className="dark:text-postfy-200/50 text-sm text-postfy-800/50">Apenas MP4</span>
-      <span className="dark:text-postfy-200/50 text-sm text-postfy-800/50">{`${files.length} arquivos selecionados`}</span>
     </div>
   )
 }

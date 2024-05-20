@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/custom/Header";
 import { DataTable } from "@/components/custom/TableVideos";
-import { videoCollumns } from "../data/tableVideoCollumns";
+import { videoCollumns } from "../../data/tableVideoCollumns";
 import { Container } from "@/components/custom/Container";
 import { Dropzone } from "@/components/custom/Dropzone";
 
@@ -15,72 +15,7 @@ export default function Videos() {
       </Container>
 
       <Container>
-        <DataTable columns={videoCollumns} data={[
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-          {
-            id: "sdsdssfsd",
-            video: "Aula-teste-mp4",
-            descriptionPost: "teste",
-            hashTagsPost: ["teste"],
-            uploadProgress: 20,
-            postProgress: 0,
-          },
-        ]} />
+        <DataTable columns={videoCollumns} data={[]} />
       </Container>
     </main>
   )
