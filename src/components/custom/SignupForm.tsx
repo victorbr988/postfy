@@ -8,7 +8,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@radix-ui/react-toast";
 import { z } from "zod";
 
-export function LoginForm() {
+export function SignupForm() {
   const { toast } = useToast()
   const { register, formSchema, handleSubmit, errors, reset } = useLoginHookForm()
 
@@ -70,12 +70,12 @@ export function LoginForm() {
           className="font-jetbrains py-6 w-full text-lg"
           variant="outline"
         >
-          Entrar
+          Receber código por email
         </Button>
       </Form.Trigger>
       <div className="flex gap-1">
-        <span className="font-jetbrains dark:text-postfy-100 text-postfy-900">Ainda não possui conta?</span>
-        <Link className="font-jetbrains text-postfy-700 dark:text-postfy-200  font-bold dark:font-normal" href="/signup">Cadastre-se</Link>
+        <span className="font-jetbrains dark:text-postfy-100 text-postfy-900">Já possui conta?</span>
+        <Link className="font-jetbrains text-postfy-700 dark:text-postfy-200  font-bold dark:font-normal" href="/">Fazer login</Link>
       </div>
     </Form.Root>
   )

@@ -11,6 +11,7 @@ import {
 import { FiEdit, FiSend, FiTrash2 } from "react-icons/fi"
 import { Progress } from "@/components/ui/progress"
 import { Checkbox } from "@/components/ui/checkbox"
+import Link from "next/link"
 
 export type Video = {
   id: string;
@@ -72,7 +73,7 @@ export const videoCollumns: ColumnDef<Video>[] = [
   },
   {
     id: "actions",
-    cell: () => {
+    cell: ({ row }) => {
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -89,10 +90,16 @@ export const videoCollumns: ColumnDef<Video>[] = [
               <span className="flex-1">Publicar</span>
             </DropdownMenuItem>
             <DropdownMenuItem
-              className="hover:dark:bg-postfy-800 hover:dark:-none hover:bg-postfy-200/30 cursor-pointer dark:text-postfy-200 text-postfy-800 flex gap-2 items-center"
+              className="hover:dark:bg-postfy-800 hover:dark:-none hover:bg-postfy-200/30 cursor-pointer dark:text-postfy-200 text-postfy-800"
             >
-              <FiEdit className="w-4 h-4" />
-              <span className="flex-1">Editar</span>
+              <Link
+                className="flex-1 flex gap-2 items-center"
+                href={`/edit/${row.getValue("id")}`}
+              >
+                <FiEdit className="w-4 h-4" />
+                <span className="flex-1">Editar</span>
+              </Link>
+              
             </DropdownMenuItem>
             <DropdownMenuItem 
               className="hover:dark:bg-postfy-800 hover:dark:-none hover:bg-postfy-200/30 cursor-pointer text-red-300 flex gap-2 items-center"

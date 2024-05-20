@@ -1,5 +1,6 @@
 import { FormHTMLAttributes, InputHTMLAttributes, LabelHTMLAttributes, ReactNode, Ref, forwardRef } from "react";
 import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 
 interface IFormRootProps extends FormHTMLAttributes<HTMLFormElement> {}
 
@@ -46,5 +47,14 @@ function InputCustom(props: IFormFieldProps, ref: Ref<HTMLInputElement>) {
 }
 const InputField = forwardRef(InputCustom)
 
+interface IFormTextAreaProps extends InputHTMLAttributes<HTMLTextAreaElement> {}
 
-export const Form = { Root, Trigger, Label, Field: InputField }
+function TextAreaCustom(props: IFormTextAreaProps, ref: Ref<HTMLTextAreaElement>) {
+  return (
+    <Textarea { ...props } ref={ref}/>
+  )
+}
+const TextAreaField = forwardRef(TextAreaCustom)
+
+
+export const Form = { Root, Trigger, Label, Field: InputField, TextAreaField }
