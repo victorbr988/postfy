@@ -7,7 +7,7 @@ import { Provider } from "@/providers/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Postfy",
+  title: "SemeaTech",
 };
 
 export default function RootLayout({

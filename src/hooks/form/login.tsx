@@ -4,8 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-function isGmailValid(mail: string) {
-  return mail.includes("gmail.com")
+function isMailValid(mail: string) {
+  return mail.includes("@gmail") || mail.includes("@hotmail")
 }
 
 const formSchema = z.object({
@@ -13,18 +13,19 @@ const formSchema = z.object({
     .string()
     .min(1, { message: "O email é obrigatório" })
     .email({ message: "Formato de e-mail inválido" })
-    .refine((mail) => isGmailValid(mail), { message: "Email não suportado" }),
+    .refine((mail) => isMailValid(mail), { message: "Email não suportado" }),
   password: z
     .string()
     .min(8, { message: "A senha deve ter ao menos 8 carácteres" })
 })
 
 export function useLoginHookForm() {
+  const credentialsAlreadSaved = localStorage?.getItem("login") || null
   const { register, handleSubmit, formState: { errors }, reset } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      email: "",
-      password: ""
+      email: credentialsAlreadSaved ? JSON.parse(credentialsAlreadSaved).email : "",
+      password: credentialsAlreadSaved ? JSON.parse(credentialsAlreadSaved).password : ""
     }
   })
 

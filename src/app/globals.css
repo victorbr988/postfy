@@ -6,13 +6,13 @@
 @tailwind utilities;
 
 body {
-  @apply dark:bg-postfy-900 bg-postfy-100
+  @apply dark:bg-vm-900 bg-vm-100
 }
 
 input {
-  @apply dark:text-postfy-200 dark:placeholder:text-postfy-200 dark:border-postfy-800 text-postfy-900 placeholder:text-postfy-900 border-postfy-200 font-jetbrains dark:bg-postfy-900 bg-postfy-100;
+  @apply dark:text-vm-200 dark:placeholder:text-vm-200 dark:border-vm-800 text-vm-900 placeholder:text-vm-900 border-vm-200 font-jetbrains dark:bg-vm-900 bg-vm-100;
 }
 
 .iconTheme {
-  @apply cursor-pointer dark:text-postfy-200 text-postfy-900
+  @apply cursor-pointer dark:text-vm-200 text-vm-900
 }

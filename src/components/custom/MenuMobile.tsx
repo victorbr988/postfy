@@ -22,19 +22,19 @@ export function MenuMobile() {
   return (
     <div className="sm:hidden">
       <Dropdown 
-        className="dark:bg-postfy-900 bg-postfy-100 font-poppins border border-postfy-200 dark:border-postfy-800 ml-4"
+        className="dark:bg-vm-900 bg-vm-100 font-poppins border border-vm-200 dark:border-vm-800 ml-4"
         Icon={ FiMenu }
       >
         <DropdownMenuLabel className="font-medium">Minha conta</DropdownMenuLabel>
-        <DropdownMenuSeparator className="dark:bg-postfy-800 bg-postfy-200" />
-        <DropdownMenuItem className="dark:text-postfy-200 text-postfy-800 flex gap-2 items-center">
+        <DropdownMenuSeparator className="dark:bg-vm-800 bg-vm-200" />
+        <DropdownMenuItem className="dark:text-vm-200 text-vm-800 flex gap-2 items-center">
           <FiUser className="w-4 h-4" />
           <span className="flex-1">Meu perfil</span>
         </DropdownMenuItem>
 
         <DropdownMenuItem
           onClick={() => handleTheme()} 
-          className="dark:text-postfy-200 text-postfy-800 flex gap-2 items-center"
+          className="dark:text-vm-200 text-vm-800 flex gap-2 items-center"
         >
           <ThemeSwitch iconClasses="h-4 w-4" />
           <span
@@ -43,10 +43,10 @@ export function MenuMobile() {
             Alterar tema
           </span>
         </DropdownMenuItem>
-        <DropdownMenuSeparator className="dark:bg-postfy-800 bg-postfy-200" />
+        <DropdownMenuSeparator className="dark:bg-vm-800 bg-vm-200" />
 
         <DropdownMenuLabel>Navegar</DropdownMenuLabel>
-        <DropdownMenuItem className="dark:text-postfy-200 text-postfy-800 flex gap-2 items-center">
+        <DropdownMenuItem className="dark:text-vm-200 text-vm-800 flex gap-2 items-center">
           <FiYoutube />
           <Link 
             className="flex-1" 
@@ -55,7 +55,7 @@ export function MenuMobile() {
             Videos
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuSeparator className="dark:bg-postfy-800 bg-postfy-200" />
+        <DropdownMenuSeparator className="dark:bg-vm-800 bg-vm-200" />
         
         <DropdownMenuItem>
           <Link

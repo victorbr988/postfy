@@ -11,7 +11,7 @@ const config = {
   prefix: "",
   theme: {
     colors: {
-      postfy: {
+      vm: {
         100: "#E2E8F0",
         200: "#9290C3",
         700: "#0f172a",
